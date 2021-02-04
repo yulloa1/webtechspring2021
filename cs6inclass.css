@@ -1,0 +1,14 @@
+table {border: 2px solid black;
+    font-family: Arial;
+    color:navy;
+    width:50%;
+    margin-right:auto; margin-left:auto;
+    background:url(music.gif) center repeat fixed;
+    border-collapse:collapse;
+}
+td{border: 2px solid black;text-align: center;}
+tr#top {background-color:yellow;font-weight: bold;}
+.c1 {width: 35%;}
+.c2 {width: 45%;}
+caption {text-align:center; font-family: Arial; color: navy;
+        margin-bottom: 50px; font-size: 1.5em;}
