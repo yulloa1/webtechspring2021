@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS10 - Practicing Javascript</title>
+
+	<style type="text/css">
+	h1 {font-weight:bold; background-color: Silver;}
+	p {text-align:center;}
+	</style>
+	    
+  <script type="text/javascript">
+  function changeTitle () 
+  {
+    document.getElementById("one").innerHTML= "I Know Javascript";
+
+  }
+  
+  function chgBgCol()
+  {
+    document.getElementById("two").style.backgroundColor="yellow";
+  }
+
+  function chgBgColBack()
+  {
+    document.getElementById("two").style.backgroundColor="white";
+  }
+
+  function chgBgColBack()
+  {
+    var x;
+    x = document.getElementById("two");
+    x.style.backgroundColor = "white";
+  }
+
+  function showVar()
+  {
+    var x, y;
+    x=50;
+    y=75;
+    alert(x);
+    alert(y);
+    alert(x + y);
+    alert (x-y);
+    alert (x * y);
+    alert (x/y);
+    alert("x");
+    x="Yago";
+    y="is the greatest dude on earth!";
+    alert(x + y);
+    x = "10";
+    y = "50";
+    alert(x + y);
+    x = "20";
+    y = "50";
+    alert(x + y)
+  }
+
+	</script>
+  </head>
+
+  <body>
+    <hr />
+	<h1 id="one"> Practice with Javascript</h1>
+    <hr />
+    <p>
+        <button onclick="changeTitle()">Click To Change Title</button>
+    </p>
+    <hr />
+   	<h1> More practice with Javascript </h1>
+    <p id="two" onmouseover="chgBgCol()" onmouseout="chgBgColBack()" style="border:3px solid red"> Mouse over me to change my color </p>
+    
+    <hr/>
+    <h1> Understanding Variables in Javascript </h1>
+    <p>
+    	<button onclick="showVar()"> Click on me to start </button>
+    </p>
+  </body>
+</html>
