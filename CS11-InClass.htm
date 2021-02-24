@@ -8,7 +8,8 @@
 
 	<style type="text/css">
 	h1 {font-weight:bold; background-color: Silver;}
-	p {text-align:center;}
+  p {text-align:center;}
+  #three {text-align:center;margin: auto; display:block;}
 	</style>
 	    
   <script type="text/javascript">
@@ -55,9 +56,22 @@
     alert(x + y);
     x = "20";
     y = "50";
-    alert(x + y)
-  }
 
+  }
+  
+  function addBrd()
+  {
+    document.getElementById("three") .style .borderColor="black";
+    document.getElementById("three") .style .borderWidth="50px";
+    document.getElementById("three") .style . borderStyle="ridge";
+  }
+  
+  function rmvBrd()
+  {
+    document.getElementById("three").style.border="none";
+  }
+     
+    
 	</script>
   </head>
 
@@ -75,7 +89,9 @@
     <hr/>
     <h1> Understanding Variables in Javascript </h1>
     <p>
-    	<button onclick="showVar()"> Click on me to start </button>
+      <button onclick="showVar()"> Click on me to start </button>
+      
     </p>
+    <img id="three" onclick="addBrd()" ondblclick="rmvBrd()" src="beaver.jpg" alt="beaver image" title="beaver">
   </body>
 </html>
