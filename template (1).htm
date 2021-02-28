@@ -8,50 +8,6 @@
 
 	<style>
 	/* Your styles go here */
-	a {text-decoration: none;}
-	a:hover {background-color:lime;}
-
-	img#one {display: block;}
-	/* This is to get rounded edges on an image*/
-	/*img#two {width:40%; border-radius:50%;}*/
-	/* to Center an image on the page */
-	/*img#two {width: 40%; display: block; margin:auto;}*/
-		 
-	img#two {width:40%;}
-	/*This is for flipping an image along the horizontal or X-axis*/
-	/*img#two:hover {transform: scaleX(-1);}*/
-		/* to create a box-shadow around on image on hover. The first
-		number is the horizontal offset. The second is the vertical offset. The
-		third is the BLUR factor. The fourth is the SPREAD factor. The last is 
-		the color */
-	/*img#two:hover {box-shadow:0 0 0 20px magenta}*/
-
-	/*----------------------------------------------------------------------------*/
-
-	.container {
-		position:relative;
-		width:40%;
-		margin:auto;
-	}
-	img#daimg {width:100%; display:block; height:auto;}
-	.curtain {
-		position:absolute; left:0%; right:0%; top:0%;
-		background-color:silver;
-		overflow:hidden;
-		width:100%; height:0%;
-		transition: 5s ease;
-	}
-	.words {
-		color:navy;
-		font-size:16px;
-		position:absolute; top:50%; left:10%;
-		overflow:hidden;
-		transition: translate(-50%, -50%);
-	}
-
-	.container:hover .curtain{bottom:0%; height:100%;}
-	
-
 	</style>
 	
 	<script>
@@ -62,28 +18,8 @@
 
   <body>
 	<!-- Your HTML goes here -->
-	<h3> Using Hover for dynamic changes using CSS</h3>
-	<a href="http://www.babson.edu">Link to Babson</a> &nbsp; &nbsp; &nbsp;
-	<a href="http://www.amazon.com">Link to Amazon</a> &nbsp; &nbsp; &nbsp;
-	<a href="http://www.newtonma.gov">Link to Garden City</a>
-	<hr/>
-	<h3> Understanding display property of CSS</h3>
-	Ulloa
-	<img id="one" src="beaver.jpg" alt="Beaver Image" title="Go Babson"/>
 
-	<hr/>
-
-	<img id="two" src="tiger5.jpg" alt="Tiger Image" title="Tiger King"/>
-	<hr/>
-<div class="container">
-	<img id="daimg" src="photo.JPG" alt="Sunset photo" title="Sunset by Yago"/>
-	<div class="curtain">
-		<div class="words">
-	This is a photograph shot by the world renowned photographer <br/>
-	Shankar as he was skiing down a slope devoid of snow <br/>
-	while being chased by a Grizzly in the summer of 1945.
-		</div>
-	</div>
-</div>
+	
+	
   </body>
 </html>
