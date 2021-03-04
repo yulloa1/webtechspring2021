@@ -1,5 +1,5 @@
 <?PHP 
-$to = "gshankar@babson.edu"; 
+$to = "yulloa1@babson.edu"; 
 $subject = "Results from your Request Info form";
 $headers = "From: Form Mailer";
 $forward = 0;
