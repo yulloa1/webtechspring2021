@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>Making a Calculator</title>
+        <style type="text/css">
+            form {background-color:silver; color:Navy; font-family:Arial;
+            padding:50px 100px 50px 200px; width:50%;margin:auto;}
+            h1 {text-align:center; font-family: Lucida Handwriting; color:Green;}
+            .a {height:30px;}
+        </style>
+
+        <script type="text/javascript">
+           function showMe ()
+           {
+               var myform; n1, n2, myres;
+               myform = document.getElementById("frm");
+               if ( (myform.num1.value == "")|| (myform.num2.value,length == 0) )
+               {
+                   alert ("Please enter a vlue in both fields");
+               }
+               else if ( (isNaN(myform.num1.value)==true) || (isNaN(myform.num2.value)== true) )
+               {
+                   alert ("Please enter only numerial values")
+               }
+               else 
+               {
+
+            
+               n1 = myform.num1.value;
+               n1 = parseFloat(n1);
+               n2 = myform.num2.value;
+               n2 = parseFloat(n2);
+               if (yago == "add")
+               {
+                   myres = n1 + n2;
+               }
+               else if (yago == "sub")
+               {
+                    myres = n1 - n2;
+               }
+               else if (yago == "mul")
+               {
+                   myres = n1 * n2;
+               }
+               else if (yago == "div")
+               {
+                   myres = n1 / n2;
+               }
+              myform.res.value= myres;
+
+              return false;
+            }
+           }
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Simple Calculator</h1>
+        <form id="frm" method="POST" action="">
+            <p>
+                <input class="a" type="text" name="num1" placeholder="Enter.." size="7"/>
+                &nbsp;&nbsp;&nbsp;
+                <input class="a" type="text" name="num2" placeholder="Enter.." size="7"/>
+            </p>
+            <p>
+                Result: &nbsp; <input class="a" type="text" name="res" placeholder="Show.." size="10"/>
+            </p>
+            <p>
+                Select the background color for the form:&nbsp;
+                <select name="bgcol">
+                    <option value="null">No Color Chosen</option>
+                    <option value="blue">Blue Color</option>
+                    <option value="yellow">Yellow Color</option>
+                    <option value="magenta">Magenta Color</option>
+                </select>
+            </p>
+            <p>
+                <button id="add" onclick="return showMe(this.id)" class="a">Add</button> &nbsp;&nbsp; 
+                <button id="sub" onclick="return showMe(this.id)" class="a">Subtract</button>&nbsp;&nbsp; 
+                <button id="mul" onclick="return showMe(this.id)" class="a">Multiply</button>&nbsp;&nbsp; 
+                <button id="div" onclick="return showMe(this.id)" class="a">Divide</button>
+                <input class="a" type="reset" name="reset" value="Clear Form"/>
+            </p>
+            
+            
+        </form>
+   
+    
+    </body>
+</html>

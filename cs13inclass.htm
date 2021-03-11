@@ -24,9 +24,62 @@
         </style>
 
         <script type="text/javascript">
-            
+        function showImg(buttons)
+        {
+          var myimg;
+          myimg = document.getElementById("justFrame");
+          if (buttons == "b1")
+          {
+            myimg.src = "shamrock.jpg";
+            myimg.alt = "Shamrock Image";
+            myimg.title = "Shamrock Rocks";
+          }
+          else if (buttons == "b2")
+          {
+            myimg.src = "clover.jpg";
+            myimg.alt="Clover Image";
+            myimg.title = "Clover Rocks";
+          }
+          else if (buttons == "b3")
+          {
+            myimg.src= "thyme.jpg";
+            myimg.alt = "Thyme Image";
+            myimg.title = "Tasty Thyme"
+          }
+          else
+          {
+            myimg.src = "maple.jpg";
+            myimg.alt = "Maple Image";
+            myimg.title = "Majestic Maple";
+          }
+        }
             
         
+        function makePretty(yago)
+        {
+          var myimg;
+          myimg= document.getElementById(yago)
+          myimgw=myimgw + 40;
+          myimg.width = myimg.w;
+          myimg.style.boxShadow = "5px 10px 20px purple";
+          if (yago == "tig5")
+          {
+            document.getElementById("t5").style.display = "block";
+          }
+          else if (yago="tig6")
+          {
+            document.getElementById("t6").style.display = "block"
+          }
+          else
+          {
+            document.getElementById("t7").style.display = "block";
+          }
+        }
+        function makenormal (jasmine)
+        {
+          var myimg;
+
+        }
         </script>
         
     </head>
@@ -37,30 +90,30 @@
         <h2> Example Situation One</h2>
         <img id="justFrame" src="" alt="Show Image Here" title=""/>
         <p>
-          <button>Shamrock</button>
-          <button>Clover</button>
-          <button>Thyme</button>
-          <button>Maple</button>
+          <button id="b1" onclick="showImg(this.id)">Shamrock</button>
+          <button id="b2" onclick="showImg(this.id)">Clover</button>
+          <button id="b3" onclick="showImg(this.id)">Thyme</button>
+          <button id="b4" onclick="showImg(this.id)">Maple</button>
         </p>
         <hr/>
         <h2> Example Situation Two</h2>
         <div class="container">
-          <img src="tiger5.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
+          <img id="tig5" onmouseover="makePretty(this.id)" onmouseout="makeNormal(this.id)" img src="tiger5.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
           <div>
               <h4>Sitting Tiger</h4>
               <p>Tiger Sitting Down and Taking a Breath</p>
           </div>
         </div>   
         <div class="container">
-          <img src="tiger6.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
+          <img id="tig6" onmouseover="makePretty(this.id)" onmouseout="makeNormal(this.id)" src="tiger6.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
           <div>
             <h4>Standing Tiger</h4>
             <p>Tiger Taking a Walk</p>
         </div>
         </div>   
         <div class="container">
-          <img src="tiger7.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
-          <div>
+          <img id="tig7"onmouseover="makePretty(this.id)" onmouseout="makeNormal(this.id)" src="tiger7.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
+          <div id="t7">
             <h4>Crouching Tiger</h4>
             <p>Tiger Crouching</p>
           </div>

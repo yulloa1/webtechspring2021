@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>CS14-Processing Form Inputs</title>
+        <style type="text/css">
+            form {margin-left:200px; margin-right:200px; padding:30px;
+                  font-family:Arial; font-weight:bold; background-color:Silver;}
+            h1 {text-align:center; font-family: Arial Baltic;}
+        </style>
+
+        <script type="text/javascript">
+            function showData()
+            {
+                var myform;
+                myform - document.getElementById("frm");
+                if ( (myform.name.value="") || (myform.age.value="")
+                || (myform.gender.value= "null") || (myform.colors.value == "null"))
+                {
+                    alert ("Please enter values and select from the drop-downs");
+                }
+                else if (isNaN(myform.age.value) == true )
+                {
+                    alert("Age has to be a number");
+                }
+                else
+                {
+                    myform.result.value = "My name is " myform.name.value +
+                    " and I am a " + myform.age.value + "old " + myform.gender.value;
+                    myform.style.backgroundColor = myform.colors.value;
+                    return false;
+                }
+            }
+            
+
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        
+        <h1>Processing form inputs</h1>
+        <form id="frm" action="" method="post">
+            <p>
+                Enter your name: <input type="text" name="name" size="40" /> &nbsp;&nbsp;
+                Enter your age : <input type="text" name="age" size="4" />
+            </p>
+            <p> 
+                Select your gender: &nbsp;
+                <select name="gender">
+                    <option value="null">Select a gender</option>
+                    <option value="Female"> Female </option>
+                    <option value="Male"> Male </option>
+                </select>
+            </p>
+            <p>
+                Select the color you want for the form: &nbsp;
+                <select name="colors">
+                    <option value="null"> Please select a color</option>
+                    <option value="green">green</option>
+                    <option value="blue">blue</option>
+                    <option value="yellow">yellow</option>
+                </select>
+            </p>
+            <p> 
+                Your selections will appear here: <br />
+                <textarea name="result" cols="40" rows="3"></textarea>
+            </p>
+            <p>
+                <input onclick="return" showData() type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
+                &nbsp;&nbsp;
+                <input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px" />
+            
+            </p>
+
+        </form>
+    
+    </body>
+</html>
