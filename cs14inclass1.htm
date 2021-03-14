@@ -12,39 +12,29 @@
         </style>
 
         <script type="text/javascript">
-           function showMe ()
+           function showMe (shankar)
            {
                var myform; n1, n2, myres;
                myform = document.getElementById("frm");
-               if ( (myform.num1.value == "")|| (myform.num2.value,length == 0) )
-               {
-                   alert ("Please enter a vlue in both fields");
-               }
-               else if ( (isNaN(myform.num1.value)==true) || (isNaN(myform.num2.value)== true) )
-               {
-                   alert ("Please enter only numerial values")
-               }
-               else 
-               {
-
-            
                n1 = myform.num1.value;
                n1 = parseFloat(n1);
                n2 = myform.num2.value;
                n2 = parseFloat(n2);
-               if (yago == "add")
+
+               if (shankar == "add")
                {
                    myres = n1 + n2;
                }
-               else if (yago == "sub")
+
+               else if (shankar == "sub")
                {
                     myres = n1 - n2;
                }
-               else if (yago == "mul")
+               else if (shankar == "mul")
                {
                    myres = n1 * n2;
                }
-               else if (yago == "div")
+               else
                {
                    myres = n1 / n2;
                }
@@ -52,7 +42,6 @@
 
               return false;
             }
-           }
         </script>
         
     </head>

@@ -14,9 +14,9 @@
             function showData()
             {
                 var myform;
-                myform - document.getElementById("frm");
-                if ( (myform.name.value="") || (myform.age.value="")
-                || (myform.gender.value= "null") || (myform.colors.value == "null"))
+                myform = document.getElementById("frm");
+                if ( (myform.name.value =="") || (myform.age.value =="")
+                || (myform.gender.value == "null") || (myform.colors.value == "null"))
                 {
                     alert ("Please enter values and select from the drop-downs");
                 }
@@ -26,8 +26,8 @@
                 }
                 else
                 {
-                    myform.result.value = "My name is " myform.name.value +
-                    " and I am a " + myform.age.value + "old " + myform.gender.value;
+                    myform.result.value = "My name is " + myform.name.value +
+                    " and I am a " + myform.age.value + " old " + myform.gender.value;
                     myform.style.backgroundColor = myform.colors.value;
                     return false;
                 }
@@ -69,7 +69,7 @@
                 <textarea name="result" cols="40" rows="3"></textarea>
             </p>
             <p>
-                <input onclick="return" showData() type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
+                <input onclick="return showData()" type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
                 &nbsp;&nbsp;
                 <input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px" />
             

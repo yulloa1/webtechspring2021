@@ -29,8 +29,49 @@
                 myimg.title = "Majestic Maple";
                 myimg.alt = "Image of Maple Leaf"
             }
+            else if (myinput == "shamrock")
+            {
+                myimg.src = "shamrock.jpg"
+                myimg.title = "Majestic Shamrock"
+                myimg.alt = "Image of Shamrock Leaf"
+            }
+            else if (myinput == "thyme")
+            {
+                myimg.src = "thyme.jpg"
+                myimg.title = "Majestic Thyme"
+                myimg.alt = "Image of Thyme Leaf"
+            }
+            else if (myinput == "clover")
+            {
+                myimg.src = "clover.jpg"
+                myimg.title = "Majestic Clover"
+                myimg.alt = "Clover Image"
+            }
+            else
+            {
+                myinput = prompt("You have not inserted one of the acceptable values. Please try again")
+            }
         }  
-        
+
+
+        function flipImg()
+
+        {
+            var myimg;
+            myimg = document.getElementById("daimg2");
+            if (myimg.src.match("planes") == "planes")
+            {
+                myimg.src = "ships.jpg";
+                myimg.alt = "Ships";
+                myimg.title = "Sailing Free";
+            }
+            else 
+            {
+                myimg.src= "planes.jpg";
+                myimg.alt = "Planes";
+                myimg.title = "Flying High"
+            }
+        }
            
         </script>
         
@@ -49,7 +90,7 @@
             all-upper-case? How will you change the code to cover that?
         </p></div>
         <div>
-        <img id="daimg" onclick="showImg()" src="" alt="Image Goes Here" title="" width="200"/>
+        <img id="daimg" onclick="showImg()" src="Ships.jpg" alt="Ships" title="Sailing Free" width="200"/>
         </div>
 
         <!-- END OF PROBLEM TWO.-->
@@ -63,7 +104,7 @@
             other image. The ALT and TITLE must change appropriately.
         </p></div>
         <div>
-            <img src="planes.jpg" alt="Planes" title="Flying High" width="200"/>
+            <img id="daimg2"  onclick = "flipImg()" src="planes.jpg" alt="Planes" title="Flying High" width="200"/>
         </div>
     
     </body>

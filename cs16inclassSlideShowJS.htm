@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Change the Title, Please</title>
+	<style>
+	p, h3 {text-align:center;}
+	img {border-width: 10px; border-style: ridge; width:30%; padding: 10px;}
+    button {width:150px; height:40px; background-color:green; font-family:arial; color:yellow; border: bold, aqua;}
+    div#b{text-align:center;}
+	</style>
+    <script type="text/javascript">
+    var ss= new Array ("tiger5.jpg", "tiger6.jpg", "tiger7.jpg", "tiger8.jpg");
+    var caps = new Array ("This is webtech", "This is fun", "Teaches me everythin", "Under the sun")
+    var counter = 0;
+    function showSlides()
+    {
+        var myimg;
+        myimg = document.getElementById("daimg");
+        mycap = document.getElementById("dacap");
+        myimg.src = ss[counter];
+        mycap.innerHTML = caps[counter];
+        ++ counter; /* same as counter = counter + 1 */ 
+        if (counter > ss.length - 1)
+        { 
+            counter = 0;
+        }
+        setTimeout("showSlides()", 1000);
+    }         
+
+
+    </script>
+</head>
+<body onload="showSlides()"
+>
+    <p>
+    
+    <img id="daimg" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    
+    </p>
+    <h3 id= "dacap"></h3>
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    <div id="b">
+        <button>Click to stop/resume</button>
+    </div>
+     
+</body>
+</html>
