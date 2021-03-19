@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Contact page</title>
+	<link rel="stylesheet" href="mailer.php">
+	<link rel="stylesheet" href="Menubar.htm">
+	<style>
+	
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<div class="topnav" id="mytopnav">
+		<a href="Index.htm" class="active">Home</a>
+		<a href="CS1Inclass.htm" class="active">About Me</a>
+		<a href="Contactpage.htm" class="active">Contact</a>
+		<a href="ohhopage.htm">Ohho Noodles</a>
+		<a href="Tropchipage.htm">Tropical Chinese</a>
+		<a href="Komodopage.htm">Komodo</a>
+		<a href="Novikovpage.htm">Novikov</a>
+		<a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+	  <h1>Contact</h1>
+	<form action="mailer.php" method="POST">
+		First Name: <input type="text" name="fn" value="First Name Here">
+		Last Name: <input type="text" name="ln" value="Last Name Here">
+	</br>
+	Email: <input type="text" name="email" value="Email Here">
+</br>
+Gender:
+</br>
+Male: <input type="checkbox" name="male" value="male">
+Female: <input type="checkbox" name="female" value="female">
+</br>
+<hr>
+<button onclick="sendInfo()">Submit!</button>
+
+	</form>
+
+	
+	
+  </body>
+</html>
