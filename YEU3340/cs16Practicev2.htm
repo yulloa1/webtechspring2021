@@ -18,8 +18,47 @@
 	</style>
 	
 	<script>
-	/* Your JavaScript goes here */
+		function showMe()
+		{
+			var myform;
+			myform= document.getElementById("F");
+
+		if (myform.product.value == "")
+		{
+			alert ("Please enter a product - Milk, Fish, or Apple");
+		}
+		else if (myform.quantity.value == "")
+		{
+			alert ("please enter a quality >== 0");
+		}
+		else if (isNaN(myform.quantity.value) == true)
+		{
+			alert("Quantity must be a number");
+		}
+		else 
+		
+			{
+				if (myform.product.value.toLowerCase() == "milk")
+				{
+				myform.AmtDue.value = parseFloat(myform.quantity.value) * 3.50;
+				}
+				else if (myform.product.value.toLowerCase() == "apple")
+				{
+				myform.AmtDue.value = parseFloat(myform.quantity.value) * 0.99;
+				}
+				else if (myform.product.value.toLowerCase() == "fish")
+				{
+				myform.AmtDue.value = parseFloat(myform.quantity.value) * 5.99;
+				}
+				else 
+				{
+				alert ("Please enter either Milk, Fish, or Apple ONLY");
+				}
+			}
+		return false
+		}
 	</script>
+
   </head>
 
   <body>
@@ -37,7 +76,8 @@
     in the third field. All of this should be done when the appropriate 
     button is pressed.     
 </p>
-<form action="" method="POST">
+<form id= "F" action="" method="POST">
+		
 	<p>
 		<input type="text" name="product" size="20" placeholder="Enter product..."/>
 		&nbsp; &nbsp;&nbsp;
@@ -47,7 +87,7 @@
 		<input type="text" name="AmtDue" size="20" placeholder="show amount due"/>
 	</p>
 	<p>
-		<input class="but" type="submit" name="submit" value="What Do I Owe"/>
+		<input id="total" onclick="return showMe()"  class="but" type="submit" name="submit" value="What Do I Owe"/>
 		&nbsp; &nbsp;&nbsp;
 		<input class="but" type="reset" name="reset" value="Clear All"/>  
 	</p>

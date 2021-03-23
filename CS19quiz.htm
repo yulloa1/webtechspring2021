@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+	img {border:3px ridge black; padding:15px; display:block; margin:auto; width:50%;}
+	.b {background-color:silver; font-family:Arial; width:100px; height:40px;  margin-top:100px;}
+    p.q {margin:30px 150px; font-family:Arial; color:navy; font-style:italic;}
+    p.c {text-align:center;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	
+	/*
+	function showEagle ()
+	{
+		var myimg;
+		myimg = document.getElementById("one");
+		myimg.src = "baldeagle.jpg";
+		myimg.alt ="Bald Eagle Image";
+		myimg.title = "Eagle";
+
+
+	}
+
+	function showLynx ()
+	{
+		var myimg;
+		myimg = document.getElementById("one");
+		myimg.src = "lynx.jpg";
+		myimg.alt ="Lynx Image";
+		myimg.title = "Lynx";
+	}
+	*/ 
+
+	function showAnimal(LorE)
+	{
+		var myimg = document.getElementById("one")
+		if (LorE == "E")
+		{
+			myimg.src = "baldeagle.jpg";
+			myimg.alt = "Bald Eagle Image";
+			myimg.title = "Bald Eagle";
+		}
+		else
+		{
+			myimg.src ="lynx.jpg";
+			myimg.alt = "Lynx Image";
+			myimg.title = "Lynx";
+		}
+	}
+
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+    <p class="q">
+        Below is a blank image with two buttons. Write a function in Javascript that shows the image of the 
+        corresponding animal when each button is clicked. 
+    </p>
+
+	<img id="one" src="" alt="Image goes here" title="change title"/>
+
+    <p class="c">
+	        <button onclick="showAnimal(this.id)" id="E" class="b">Bald Eagle</button> &nbsp;&nbsp;&nbsp; <button onclick="showAnimal(this.id)" id="L" class="b">Lynx</button>
+    </p>
+	
+	
+  </body>
+</html>
