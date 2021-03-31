@@ -1,0 +1,107 @@
+﻿<!DOCTYPE>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dollar-Yuan (both ways) Converter</title>
+    <style type="text/css">
+       
+        p#inst {margin-left:200px; margin-right:200px; font-family:sans-serif; font-style:italic;}
+        form {
+            background-color: silver;
+            font-family: Arial;
+            color: navy;
+            padding-left: 300px;
+            padding-top:50px;
+            padding-bottom:50px;
+            margin-right: 200px;
+            margin-left: 200px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        p.buttons {
+            padding-left: 50px;
+            padding-top:50px;
+        }
+        p.tf {
+            padding-top: 50px;
+        }
+    </style>
+    <script>
+        function doConvert()
+        {
+            var myf;
+            myf = document.getElementById("F");
+            if ( (myf.d.value=="") && (myf.y.value==""))
+            {
+                alert ("Please enter a value in one of the two fields");
+            }
+            else if ( (myf.d.value.length > 0) && (myf.y.value.length > 0) )
+            {
+                alert ("Please enter value in ONLY one field");
+            }
+            else 
+            {
+                if ( (myf.d.value.length > 0) && (myf.y.value == ""))
+                {
+                    if (isNaN(myf.d.value) == true)
+                    {
+                        alert ("Please enter numerical values only for Dollars");
+                    }
+                    else 
+                    {
+                        myf.y.value = parseFloat(myf.d.value) * 6.55;
+                    }
+            }
+            else if ( (myf.y.value.length > 0) && (myf.y.value==""))
+            {
+                if (isNan(myf.y.value) == true)
+                {
+                    alert ("Please enter numerical values only for Yuen");
+                }
+                else 
+                {
+                    myf.d.value = parseFloat(myf.y.value) / 6.55;
+                }
+            }
+
+
+
+
+    }
+    return false
+    }
+
+    </script>
+    
+</head>
+<body>
+    <h1> Dollars to Yuan Converter.</h1>
+    <p id="inst">
+        You are given a form below with two fields. Both are text fields. Using javascript create the functionality to convert 
+        Dollars to Yuan. One (1) USD is 7.09 Yuan. One (1) Yuan is 0.14 USD.
+        Here is how the functionality must work: The user will enter one of the two fields (either Dollar or Yuan). 
+        Your function must convert it accordingly and display it in the other un-filled field. In other words, if the user 
+        enters the "Dollar" value, it must convert Dollar to Yuan. If the user enters the "Yuan" value, it must convert 
+        Yuan to Dollars. If the user leaves both fields blank, raise an error (using alert).
+        If the user enters values in both fields, you must raise an alert. 
+        If the user attempts to enter non-numeric values, you must raise an alert. 
+        The function must work when the user clicks the CONVERT button.
+    </p>
+    <form id="F" method="post">
+        <h1> Dollar/Yuan Converter.</h1>
+        <h3> Enter any one value to convert to the other. <br />
+             Do not enter both values. Use numbers only.
+        </h3>
+        <p class="tf">
+        Dollars:&dollar;&nbsp;<input type="text" name="d" size="10"/> &nbsp;&nbsp;&nbsp;
+        Yuan:&#20803;&nbsp; <input type="text" name="y" size="10" />
+        </p>
+        <p class="buttons">
+            <input id="" onclick="return doConvert()" type="submit" name="submit" value="CONVERT" /> &nbsp;&nbsp;&nbsp;
+            <input type="reset" name="reset" value="CLEAR" />
+        </p>
+    </form>
+
+</body>
+</html>

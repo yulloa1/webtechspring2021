@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Midterm - Q2M.htm</title>
+
+	<style type="text/css">
+	button{width:71%;margin:5px 100px 5px 50px;height:30px; background-color:green;}
+	img {border:5px ridge black; float:left; margin-right:50px; margin-left:50px; width:325px;}
+	p {text-align:center; font-size:larger; font-family:Arial;margin-right:50px; margin-left:50px;text-align:justify;}
+	    h2 {
+	        font-family: 'Lucida Handwriting';
+	        color: green;
+            text-align:center;
+            margin-bottom:100px;
+	    }
+	
+	
+	</style>
+	
+	<script type="text/javascript">
+	    function changeMe(x)
+		{
+			if (x == "one")
+			 {
+				 document.getElementById(x).style.borderStyle = "ridge";
+				 document.getElementById(x).style.borderColor = "red";
+				 document.getElementById("two").style.borderStyle="none";
+				 document.getElementById("b").style.backgroundColor = "red";
+				 document.getElementById("b").style.fontStyle="italic";
+				 document.getElementById("b").style.textDecoration = "none";
+			 }
+			 else if (x == "two")
+			 {
+				 document.getElementById(x).style.borderStyle = "ridge";
+				 document.getElementById(x).style.borderColor = "blue";
+				 document.getElementById("one").style.borderStyle="none";
+				 document.getElementById("b").style.backgroundColor = "blue";
+				 document.getElementById("b").style.fontStyle="normal";
+				 document.getElementById("b").style.textDecoration = "underline";
+			 } 
+			 else
+			 {
+				 
+				 document.getElementById("one").style.borderStyle="none";
+				 document.getElementById("two").style.borderStyle = "none";
+				 document.getElementById("b").style.backgroundColor = "green";
+				 document.getElementById("b").style.fontStyle="normal";
+				 document.getElementById("b").style.textDecoration = "none"; 
+			 }
+		}
+    </script>
+  </head>
+
+  <body>
+    <h1>Midterm - Question 2 (25 points)</h1>
+    <hr />
+    <p> You are given three images below. They each have a border that is of "ridge" style and black in color. (1) If you click on the first image: (a) Change the border of the FIRST image to a RED color. (b)Remove the border of the SECOND image (the image should be there, but, without a border). (c) Change the color of the button above to Red. (d) The text in the button must be italicized and not underlined (2+2+1+2 points). </p>
+<p>
+    (2) When you click on the second image: (a) Change the border of the SECOND image to a BLUE color (b) Remove the border of the FIRST image (the image should be there, but, without a border). (c) Change the text of the button to BLUE. (d)The text in the button must be UNDERLINED and NOT IN italics. (2+2+1+2). In both cases, the THIRD image must remain 
+        just the way it is given to you. </p> 
+        <p>(3) When the user clicks on the third image, (1) The two tiger images must be without borders. (2) The button color must go back to Green. (c) the text in the button must not be underlined or italicized.(2+2+2) Write this as a single function (5 points) or as many functions as you need (0 points). 
+    </p>
+
+      <button id="b"> Change my color </button>
+      <p>&nbsp;<!-- Just a place holder. Please ignore--></p>
+      <img id="one" onclick="changeMe(this.id)" src="tiger3.jpg" alt="Tiger 3" title="Image One" />
+      <img id="two" onclick="changeMe(this.id)" src="tiger4.jpg" alt="Tiger 4" title="Image Two" />
+      <img id="three" onclick="changeMe(this.id)" src="nothing.png" alt="Nothing" title="Nothing to Display" />
+	  	
+    
+    
+  </body>
+</html>

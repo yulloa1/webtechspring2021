@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title></title>
+        <style type="text/css">
+         h1 {text-align:center; font-family:Arial;}
+         form {background-color:silver;  margin-left:200px; padding-left:100px;padding-right:50px;
+         padding-top:50px; padding-bottom:50px; float:left;}
+         .b {height:50px; width:150px;}
+         img {float:left;width:15%}
+         p#desc {margin:20px 200px 20px 200px; font-family:cursive; color:navy;}
+         span {font-style:italic; font-weight:bold;}
+        </style>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+
+       <h1>Fall 2017 Midterm Question 3 - Q3.htm</h1>
+       <p id="desc">
+            (13 points) You are given a form with a drop down and two text fields. The user will choose a product from the drop down (please note the prices shown for each product). The user will then enter a quantity. When the user clicks on the Show Total Due button, please show the total amount (product price * the quantity specified), with the $ sign (12 points) If the user does not choose the product or if the user does not enter a quantity or if the user specifies a non-numerical value, please change the image next to the form to an angry face. The title of the image must clearly specify the error (e.g., if the user does not select the product, the title should be "Please select a product"). Of course you can only see it if you mouse over the image. If the user does everything right, then the image must be that of the smiley face with the title that says "You did good!" <span>Remember to use "return function-name()" (in your event definition) and "return false" (as the last statement in your function). Assume the product prices as: $90.75 for the bulbs, $250.25 for the lamps, and $169.99 for the controller.</span>
+
+       </p>
+       <form action="" method="POST">
+        <p>
+            Select your product (note the prices shown):&nbsp;&nbsp;
+            <select name="prod">
+                <option value="zero">None Chosen</option>
+                <option value="bulb">6-Pack LED Bulbs ($90.75)</option>
+                <option value="lamp">Tiffany Style Table Lamp ($250.25)</option>
+                <option value="ctrl">Remote Controller ($169.99)</option>
+            </select>
+        </p>
+        <p>
+            Enter the quantity: &nbsp;&nbsp;<input type="text" name="qty" size="10"/>
+        </p>
+        <p>
+                Total Amount Due: &nbsp;&nbsp;<input type="text" name="amt" size="15"/>
+        </p>
+        <p>
+            <input class="b" type="submit" name="submit" value="Show Total Due" /> &nbsp;&nbsp;
+            <input class="b" type="reset" name="reset" value="Clear Form" />
+        </p>
+       </form>
+       <img src="smiley.jpg" alt="Status Image" title=""/>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Midterm Exam - Spring 2021 - Q2</title>
+        <style type="text/css">
+            p {
+                font-family: Arial;
+                color: navy;
+                margin: 50px 250px 50px 250px;
+            }
+            h1 {
+                text-align: center;
+                color: navy;
+                font-family: Arial;
+            }
+            div {
+                margin-right: 200px;
+                margin-left: 200px;
+                margin-bottom:30px;
+                padding-left:150px;
+                background-color: silver;
+                border: 1px solid red;
+            }
+            button {
+                margin-bottom: 20px;
+            }
+            img {border:5px ridge red; float:right;}
+        
+        </style>
+        <script type="text/javascript">
+        function showImg(buttons)
+        {
+            var myimg 
+            myimg=document.getElementById("change");
+            if (buttons == "one") 
+            {
+                myimg.src = "smiley.jpg";
+                myimg.alt = "Smile";
+                myimg.title = "Smiles pic";
+                document.getElementById("Title").innerHTML="Web Tech is Fun"
+            }
+            else if (buttons == "two")
+            {
+                myimg.src = "angry.jpg";
+                myimg.alt = "Angry";
+                myimg.title = "Angry pic";
+                document.getElementById("Title").innerHTML="Web Tech is Nasty"
+            }
+            else if (buttons == "three")
+            {
+                myimg.src = "frown.jpg";
+                myimg.alt ="Frown";
+                myimg.title = "Sad pic";
+                document.getElementById("Title").innerHTML="Web Tech is Crazy"
+            }
+        }
+           
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Select a String (Question 2 - 25 points)</h1>
+        <p>
+            Below you are given a section with 3 buttons. Each button represents a title that is shown on the button. 
+            Each button also has a associated image: Fun button (smiley face), Nasty button (angry face), Crazy button (sad face).
+            Please create the following functionality when each button is clicked:  (1) please change the title 
+            of the section to the title text shown on the corresponding button. (2) There is a blank image on the page. Please 
+            change the image to show the image corresponding to each button. For full 25 points, write this as a single function 
+            or for 20 points use as many functions as needed.
+            
+        </p>
+        <div >
+                <h2 id="Title" > Section Title - this must change</h2>
+               
+                <img id="change" src="" alt="Please change this image" title=""/>
+                
+                <p>&nbsp;</p> <!-- Please ignore this. Just to create additional space --> 
+                  
+                <button id="one" onclick="showImg(this.id )" onclick= "changeTitle()">Web Tech is Fun</button> &nbsp;
+                <button id="two" onclick="showImg(this.id)" onclick= "changeTitle()">Web Tech is Nasty </button>&nbsp;
+                <button id="three" onclick="showImg(this.id)" onclick= "changeTitle()">Web Tech is Crazy </button>
+        </div>
+        
+   
+    
+    </body>
+</html>

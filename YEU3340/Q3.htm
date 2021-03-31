@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Midterm Exam - Spring 2021 - Q3</title>
+        <style type="text/css">
+            table, td {border: 1px solid black;text-align:center; font-size:medium;}
+            table {margin-right: auto;margin-left: auto;font-family: Arial;color: black;width:80%;}
+            .one {width: 30%;}
+            .two, .tri {width:35%;}
+            button {width: 80px;height: 40px;}
+            p#q {font-family: sans-serif;margin-right: 130px;margin-left: 130px;}
+            h1 {font-family:Arial; font-size:2em; text-align:center;}
+            input.clr {width: 150px;height: 40px;}
+            p#clearbutton {text-align: center;}
+            img {width:10%;}
+        </style>
+        <script>
+            function showTot()
+            {
+                var myf;
+                myf=document.getElementById("F");
+                if ( (myf.shoeq.value=="") && (myf.beltq.value==""))
+            {
+                alert ("Please enter a value in one of the two fields");
+            }
+            else if ( (myf.beltq.value.length > 0) && (myf.shoeq.value.length > 0) )
+            {
+                alert ("Please enter value in ONLY one quantity field");
+            }
+            else
+            p = prompt("Enter Price")
+            {
+                if ((myf.beltq.value.length > 0) && (myf.shoeq.value == ""))
+                {
+                    if ((p < 12.99) || (p > 39.99))
+                    {
+                        alert ("Please enter a value between 12.99 and 39.99");
+                    }
+                else if (isNaN(p) == true)
+                    {
+                        alert ("Please enter numerical values only for price");
+                    }
+                else 
+                    {
+                        myf.beltamount.value = parseFloat(myf.beltq.value) * p;
+                        myf.shoeamount.value = "$0.00"
+                    }
+                
+                
+                }
+                else if ((myf.shoeq.value.length > 0) && (myf.beltq.value == ""))
+                {
+                    if ((p < 12.99) || (p > 39.99))
+                    {
+                        alert ("Please enter a value between 12.99 and 39.99");
+                    }
+                else if (isNaN(p) == true)
+                    {
+                        alert ("Please enter numerical values only for price");
+                    }
+                else 
+                    {
+                        myf.shoeamount.value = parseFloat(myf.shoeq.value) * p;
+                        myf.beltamount.value = "$0.00";
+
+                    }
+                
+                
+                }
+                
+            }
+            
+            return false
+            }
+
+
+
+        </script>
+       
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Q3 - Fill out the Form (25 points)</h1>
+        <p id="q"> 
+            You are give a table within a form. Read instructions carefully before starting.
+            The first has the product name,the second is the quantity (the user will enter this) and the third, the total amount (your 
+            function needs to compute this and show it). Use Javascript to create a functionality that does the following:<br/><br/>
+            1. The user should enter the quantity in one of the two rows only. If both are entered, alert the user to enter only one. 
+            If neither is entered, alert the user to enter a value in one of the two quantity fields. These two validations are 
+            worth 8 points total. For the other 5 points, validate the quantity for non-numerical values.(<em>This is a little 
+            challenging and please make sure you get the rest working before attempting this part</em>)<br/><br/>
+            
+            2. After entering the quantity, the user will click on the Compute Total button. Please PROMPT the user to enter a price. 
+            Make sure that you validate price for non-numerical values.You may assume that the price field will always be entered (and 
+            hence you do not have to validate it for blank value). But, the acceptable price range is between $12.99 and $39.99. If 
+            any other value is entered, please let the user know. This part is worth 8 points (for the pop up and validations). <br/><br/>
+           
+            3.Use the price and the quantity and compute the total amount and display it in the Amount field corresponding to the product
+            that user has chosen. The amount should be shown with the $ sign. The other Amount field (i.e. for the product NOT chosen,
+            show the amount as $0.00).
+            
+            <em>Remember: You may need the "return function-name" and "return false".</em>
+
+            
+        <form id="F" action="" method="POST">
+        <table>
+            <tr>
+                
+                <td class="one">Product</td>
+                <td class="two">Quantity</td>
+                <td class="tri">Amount</td>
+            </tr>
+            <tr>
+                <td class="one"><p>Belt</p></td>
+                <td class="two"><p><input type="text" name="beltq" size="4" /></p></td>
+                <td class="tri"><p><input type="text" name="beltamount" size="6" /></p></td>
+            </tr>
+             <tr>
+                <td class="one"><p>Shoe</p></td>
+                <td class="two"><p><input type="text" name="shoeq" size="4" /></p></td>
+                <td class="tri"><p><input type="text" name="shoeamount" size="6" /></p></td>
+            </tr>
+        </table>
+            <p id="clearbutton">
+               <input class="clr" onclick="return showTot()" type="submit" name="submit" value="COMPUTE TOTAL" /> &nbsp;&nbsp;&nbsp;
+             <input class="clr" type="reset" name="reset" value="CLEAR FORM" />
+                </p>
+        </form>
+    </body>
+</html>

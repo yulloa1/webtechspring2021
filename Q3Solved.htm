@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title></title>
+        <style type="text/css">
+         h1 {text-align:center; font-family:Arial;}
+         form {background-color:silver;  margin-left:200px; padding-left:100px;padding-right:50px;
+         padding-top:50px; padding-bottom:50px; float:left;}
+         .b {height:50px; width:150px;}
+         img {float:left;width:15%}
+        </style>
+        <script type="text/javascript">
+            function showTot()
+            {
+                myf = document.getElementById("f");
+                myimg = document.getElementById("p");
+                myprice = 0;
+                
+
+                if (myf.prod.value == "zero")
+                {
+                    myimg.src = "angry.jpg";
+                    myimg.alt = "Failure";
+                    myimg.title = "Please choose product";
+                    
+                }
+                else if ( (myf.qty.value == "") || isNaN(myf.qty.value) )
+                {
+                    myimg.src = "angry.jpg";
+                    myimg.alt = "Failure";
+                    myimg.title = "Enter a numerical value for quantity"; 
+                }
+                else
+                {
+                    if (myf.prod.value == "bulb")
+                        {
+                            myprice = 90.75;
+                        }
+                    else if (myf.prod.value == "lamp")
+                        {
+                            myprice = 250.25;
+                        }
+                    else
+                    {
+                        myprice = 169.99;
+                    }
+
+                    myf.amt.value = "$" + parseFloat(myf.qty.value) * myprice;
+                    myimg.src = "smiley.jpg";
+                    myimg.alt = "Succes"
+                    myimg.title = "You did good!"
+                }
+                return false;
+            }
+        
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+
+       <h1>Fall 2017 Midterm Question 3 - Q3.htm</h1>
+       <form id="f" action="" method="POST">
+        <p>
+            Select your product (note the prices shown):&nbsp;&nbsp;
+            <select name="prod">
+                <option value="zero">None Chosen</option>
+                <option value="bulb">6-Pack LED Bulbs ($90.75)</option>
+                <option value="lamp">Tiffany Style Table Lamp ($250.25)</option>
+                <option value="ctrl">Remote Controller ($169.99)</option>
+            </select>
+        </p>
+        <p>
+            Enter the quantity: &nbsp;&nbsp;<input type="text" name="qty" size="10"/>
+        </p>
+        <p>
+                Total Amount Due: &nbsp;&nbsp;<input type="text" name="amt" size="15"/>
+        </p>
+        <p>
+            <input onclick="return showTot()" class="b" type="submit" name="submit" value="Show Total Due" /> &nbsp;&nbsp;
+            <input class="b" type="reset" name="reset" value="Clear Form" />
+        </p>
+       </form>
+       <img id="p" src="smiley.jpg" alt="Success Image" title="success"/>
+    </body>
+</html>

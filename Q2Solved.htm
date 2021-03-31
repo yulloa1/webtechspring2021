@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title></title>
+        <style type="text/css">
+            h1 {text-align:center; font-family:Arial;}
+            img {float:left; clear:left;border:3px ridge red;width:150px;}
+            button {float:right; clear:right; width:100px; height:50px; background-color:lime;}
+            div {padding:50px 600px 50px 600px}
+        </style>
+        <script type="text/javascript">
+            function showApp(a)
+            {
+                if (a == "b")
+                {
+                    document.getElementById("x").src = "belt.jpg";
+                    document.getElementById("y").src = "smiley.jpg";
+                    document.getElementById(a).style.backgroundColor = "yellow";
+                    document.getElementById("s").style.backgroundColor = "white";
+                }
+                else if (a == "s")
+                {
+                    document.getElementById("x").src = "smiley.jpg";
+                    document.getElementById("y").src = "shoes.jpg";
+                    document.getElementById("b").style.backgroundColor = "white";
+                    document.getElementById(a).style.backgroundColor = "yellow";
+                }
+                else
+                {
+                    document.getElementById("x").src = "";
+                    document.getElementById("y").src = "";
+                    document.getElementById("b").style.backgroundColor = "lime";
+                    document.getElementById("s").style.backgroundColor = "lime";
+                }
+            }
+        
+        
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <h1> Fall 2017 Midterm Question 2 - Q2.htm</h1>
+    <div>
+        <img src="" id="x" alt="Belt" title=""/>
+        <button id="b" onclick="showApp(this.id)"> Belt </button>
+    </div>
+    <div>
+        <img src="" id="y" alt="Shoes" title=""/>
+        <button id="s" onclick="showApp(this.id)"> Shoes </button>
+    </div>
+    <div>
+        <img src="" id="w" alt="Placeholder" title=""/>
+        <button id="r" onclick="showApp(this.id)">Reset</button>
+    </div>
+    </body>
+</html>

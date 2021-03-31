@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<title> Midterm - Q3M.htm</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style type="text/css">
+	    button {
+	        width: 300px;
+	        height: 60px;
+	        font-family: Arial;
+	        font-size: x-large;
+	    }
+	    form {
+	        font-family: Arial;
+	        color: navy;
+	        background-color: silver;
+	        padding: 50px 100px 50px 200px;
+	        margin: 100px;
+	    }
+	    input {
+	        height: 30px;
+	    }
+	
+	</style>
+	
+	<script type="text/javascript">
+	
+		function findDollars()
+		 {
+			 var myf = document.getElementById("f");
+			 
+			 if ((myf.rupees.value.length == 0) || (myf.dollars.value.length != 0) )
+			 {
+				 alert ("Please enter the Rupee value and do not enter a value in the Dollars field");
+			 }
+			 else if ( isNaN(myf.rupees.value) )
+			 {
+				 alert ("Only numerical values are accepted");
+			 }
+			 else
+			 {
+				 myf.dollars.value = "$ " + (parseFloat(myf.rupees.value)/65).toFixed(3);
+				 return false;
+			 }
+		 }
+	
+	</script>
+	
+</head>
+
+<body>
+
+<h1 style="text-align:center; font-family:Arial; font-weight:bold;">Question#3: What is it worth?(25 points)</h1>
+<p style="font-family:arial;font-size:16pt;color:navy;padding:10px 100px 10px 100px;">
+	You are given a form. It has two text fields labeled "Rupees" and "Dollars". It also has a button at the bottom.
+    The user will enter a Rupee value (a number with decimals) in the first field. The user will then press the button.
+    You should convert the Rupee value into Dollars and show the result in the second field. To find the answer, divide the
+    Rupee value by 65 (i.e., 65 rupees is a dollar). Make sure that the dollar value will show decimal places and make sure 
+    that there is a "$" sign attached to it. The conversion should take place when the user clicks on the "WHAT IS IT WORTH?" 
+    button at the bottom (15 points). Validate the form so that an error message appears if nothing is entered in the 
+    "Rupees" field OR if something is entered in the "Dollars" field when the button is clicked.(5 points). Validate the form 
+    so that an error message appears if a non-numerical value is entered in the "Rupees" field (5 points).  Please note that the
+    form may need a "return false" and a corresponding "return function-name()" in the appropriate locations. Use the parseFloat
+    function to make the computations work without problems. 
+</p>
+<hr style="height:10px" />
+<form id="f" method="post">
+    <p>
+        Rupees: &nbsp;&nbsp; <input type="text" name="rupees" size="10" />
+    </p>
+    <p>
+        Dollars:&nbsp; &nbsp;&nbsp; <input type="text" name="dollars" size="10" />
+    </p>
+    <button onclick="return findDollars()">WHAT IS IT WORTH?</button>
+</form>
+
+</body>
+</html>
