@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>HW4 - Final Homework</title>
+        <style type="text/css">
+        td img {width:80%;}
+        table {float:left; width:20%;}
+        h1 {text-align:center; color: Navy; font-family:Arial;}
+        p {font-family:cursive, sans-serif, arial; color: navy; margin:20px 100px 20px 100px;}
+        
+
+        </style>
+
+        <!-- Make sure you add the link to the external jquery library, jquery.min.js, here -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+        $ (function(){
+                $("p#p1").mouseover (function(){
+                    $(this).css ("color", "yellow");
+                    $(this).css ("background-color", "navy")
+                });
+                $("p#p1").mouseout (function(){
+                    $(this).css ("color", "black");
+                    $(this).css ("background-color", "white");
+                });
+                $("h2#h22").click (function(){
+                    $("h2#h21").hide().delay(3000);
+                    
+                });
+                $("h2#h22").dblclick (function(){
+                    $("h2#h21").show().delay(3000);
+                });
+                $("img").click (function(){
+                    $("img#big").attr("src", this.src);
+                    $(this).width(400).height(500);
+                });
+        });
+        </script>
+
+        <!-- Make sure you add the script tag here and add the $(function(){}) here. You would need
+        this to write the jQuery functions to complete this homework. -->
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        
+        <h1> Homework 4 - jQuery </h1>
+        <p id="p1" style="border:2px solid black"> This is a paragraph. Use jQuery to create the 
+            functionality whereby when you mouse over the paragraph it changes the font to yellow and the
+            background to dark blue. When you mouse out, the font should go back to being black and the
+            background to white. 
+        </p>
+        <hr/>
+        <p> Below are two words "Appear" and "Magic". If you click on "Magic", "Appear" should disappear.
+            If you click on Magic again, "Appear" should appear. Use jQuery to complete this. Set the 
+            time elapsed to 3000 microseconds.
+        </p>
+        <h2 id="h21"> Appear! </h2>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h2 id="h22"> Magic!!!</h2>
+        <hr/>
+        
+        <p> Please use jQuery to create a functionality whereby if you click on any of the two thumbnail
+            images below, the image is shown enlarged in the space next to the images. You can decide
+            how large the enlarged image should be. </p>
+        <table>
+            <tr>
+                <td><img id="big" src="babsonwhiteflowers.jpg" alt="Babson in Spring" title="Babson White"/></td>
+                <td><img id="nl" src="northendlights.jpg" alt="North End at night" title="Boston North End"/></td>
+            </tr>
+        </table>
+        
+
+
+        
+        
+
+
+   
+    
+    </body>
+</html>

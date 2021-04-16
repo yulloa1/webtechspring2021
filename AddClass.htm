@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title></title>
+	
+
+	<style>
+	/* Your styles go here */
+    .red {font-family:arial; color:red; font-weight: bold; text-align:left;}
+	</style>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script>
+	/* Your JavaScript goes here */
+	$( function(){				// this is my API for writing Jquery.
+
+		$("h1").click ( function() 
+		{
+			$(this).addClass ("red");
+			$("h2").removeClass ("red");
+		});
+
+		$("h2").click ( function()
+		{
+			$(this).addClass ("red");
+			$ ("h1").removeClass("red");
+		});
+
+	});
+
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>This is the first line</h1>
+	<h2>This is the second line</h2>
+
+	
+	
+  </body>
+</html>
