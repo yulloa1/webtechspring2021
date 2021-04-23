@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta name="description" content="This page is meant for people that want to contact me regarding any of the restaurants or 
+	for any other reason that anyone would want to contact me. It includes a mailer form that one is suppose to fill in so that 
+	they can get into communication with me.">
+  	<meta name="keywords" content="mailer, Yago Ulloa, foodlovers, babson, Asian food">
+  	<meta name="author" content="Yago Ulloa">
+	<title>Contact page</title>
+	<link rel="stylesheet" href="Menubar.htm">
+	<style>
+	
+	</style>
+	
+	<script type="text/javascript">
+	/* Your JavaScript goes here */
+	function sendInfo()
+	{
+		var myf;
+		myf=document.getElementById("f");
+		if ((myf.fn.value=="") || (myf.ln.value==""))
+		{
+			alert ("Please fill out the first and last name box");
+		}
+
+	}
+	  
+	</script>
+  </head>
+
+  <body>
+	<div class="topnav" id="mytopnav">
+		<a href="Index.htm" class="active">Home</a>
+		<a href="CS1Inclass.htm" class="active">About Me</a>
+		<a href="Contactpage.htm" class="active">Contact</a>
+		<a href="ohhopage.htm">Ohho Noodles</a>
+		<a href="Tropchipage.htm">Tropical Chinese</a>
+		<a href="Komodopage.htm">Komodo</a>
+		<a href="Novikovpage.htm">Novikov</a>
+		<a href="Sitemappage.htm">Site Map</a>
+		<a href="Creditspage.htm">Credits</a> 
+		<a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+	  <br>
+	  <br>
+	  <br>
+	  <h1>Contact</h1>
+	<form id="f" name="frm" action="" method="POST">
+		First Name: <input type="text" name="fn" value="">
+		Last Name: <input type="text" name="ln" value="">
+	</br>
+	<br>
+	Email: <input type="text" name="email" value="">
+</br>
+Gender:
+</br>
+Male: <input type="checkbox" name="male" value="">
+Female: <input type="checkbox" name="female" value="">
+</br>
+<hr>
+<button name="b1" onclick="sendInfo()">Submit!</button>
+
+	</form>
+
+	
+	
+  </body>
+</html>
